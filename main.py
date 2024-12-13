@@ -12,7 +12,7 @@ class Couch:
 #       Add your new classes here!       #
 # (Make sure not to accidentally indent) #
 ##########################################
-        
+
 
 ########## WAVE 1 ##########
 # Checking the behavior for creating an instance of SleeperSofa
