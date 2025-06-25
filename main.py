@@ -12,8 +12,34 @@ class Couch:
 #       Add your new classes here!       #
 # (Make sure not to accidentally indent) #
 ##########################################
+class SleeperSofa(Couch):
+    def __init__(self, length, width):
+        super().__init__(length, width)
+        self.sheets = None
+        self.folded_out = False
+
+#def convert(self), folded_out invert, width double if true
+    def convert(self):     
+        if not self.folded_out:
+            self.folded_out = True
+            self.width *= 2
+        elif self.sheets is None:
+            self.folded_out = False
+            self.width //= 2
+       
+    def put_on_sheets(self, sheets):
+        if self.folded_out and self.sheets is None:
+            self.sheets = sheets
+
+    def remove_sheets(self):
+        self.sheets = None
+#Create a Sheets class with an optional attribute material with default "cotton"
+class Sheets:
+    def __init__(self,material="cotton"):
+        self.material = material
 
 
+#Method put_on_sheets
 ########## WAVE 1 ##########
 # Checking the behavior for creating an instance of SleeperSofa
 assert issubclass(SleeperSofa, Couch), "SleeperSofa must be a subclass of Couch"
